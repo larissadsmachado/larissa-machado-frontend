@@ -29,11 +29,8 @@ const Hero = () => {
               <div className="absolute inset-0 rounded-full gradient-bg animate-pulse-slow opacity-60 blur-xl" />
               <div className="absolute inset-2 rounded-full gradient-border glass">
                 <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-muted">
-                  {/* Placeholder for profile photo */}
-                  <div className="text-center p-6">
-                    <Code2 className="w-16 h-16 mx-auto text-primary mb-4" />
-                    <p className="text-muted-foreground text-sm">Sua foto aqui</p>
-                  </div>
+                  {/* FOTO */}
+                  
                 </div>
               </div>
               {/* Floating elements */}
