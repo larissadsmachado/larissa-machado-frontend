@@ -1,18 +1,19 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import TechIcon from '@/components/TechIcon';
 
 const Technologies = () => {
   const { t } = useLanguage();
 
   const technologies = [
-    { name: 'React', icon: '⚛️', color: 'from-blue-400 to-blue-600' },
-    { name: 'TypeScript', icon: '📘', color: 'from-blue-500 to-blue-700' },
-    { name: 'Next.js', icon: '▲', color: 'from-gray-400 to-gray-600' },
-    { name: 'Vite', icon: '⚡', color: 'from-purple-400 to-yellow-500' },
-    { name: 'Tailwind CSS', icon: '🎨', color: 'from-cyan-400 to-blue-500' },
-    { name: 'Git', icon: '📂', color: 'from-orange-400 to-red-500' },
-    { name: 'Figma', icon: '🎯', color: 'from-pink-400 to-purple-500' },
-    { name: 'Node.js', icon: '🟢', color: 'from-green-400 to-green-600' },
+    { name: 'React', color: 'text-cyan-500' },
+    { name: 'TypeScript', color: 'text-blue-500' },
+    { name: 'Next.js', color: 'text-foreground' },
+    { name: 'Vite', color: 'text-purple-500' },
+    { name: 'Tailwind CSS', color: 'text-cyan-400' },
+    { name: 'Git', color: 'text-orange-500' },
+    { name: 'Figma', color: 'text-pink-500' },
+    { name: 'Node.js', color: 'text-green-500' },
   ];
 
   const containerVariants = {
@@ -76,13 +77,13 @@ const Technologies = () => {
               }}
               className="group"
             >
-              <div className="glass rounded-2xl p-6 lg:p-8 text-center transition-all duration-300 card-glow gradient-border h-full">
+              <div className="glass rounded-2xl p-6 lg:p-8 text-center transition-all duration-300 card-glow gradient-border h-full flex flex-col items-center justify-center gap-4">
                 <motion.div
-                  className="text-4xl lg:text-5xl mb-4"
+                  className={tech.color}
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
-                  {tech.icon}
+                  <TechIcon name={tech.name} className="w-10 h-10 lg:w-12 lg:h-12" />
                 </motion.div>
                 <h3 className="font-display font-semibold text-foreground group-hover:text-primary transition-colors">
                   {tech.name}
