@@ -33,11 +33,11 @@ const PortfolioContent = () => {
 
 const Index = () => {
   return (
-    <ThemeProvider>
-      <LanguageProvider>
+    <LanguageProvider>
+      <ThemeProvider>
         <PortfolioContent />
-      </LanguageProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 };
 
