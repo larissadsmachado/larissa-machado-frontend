@@ -7,30 +7,57 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'E-commerce Dashboard',
+      title: 'MCMV Jaboatão',
       description: language === 'pt' 
-        ? 'Dashboard completo para gestão de e-commerce com métricas em tempo real, gráficos interativos e sistema de gerenciamento de produtos.'
-        : 'Complete e-commerce management dashboard with real-time metrics, interactive charts, and product management system.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts'],
-      github: 'https://github.com/larissadsmachado',
+        ? 'Sistema completo do programa Minha Casa Minha Vida para a prefeitura de Jaboatão dos Guararapes, com formulários de inscrição, validação de dados e painel administrativo.'
+        : 'Complete Minha Casa Minha Vida program system for Jaboatão city hall, with registration forms, data validation, and admin panel.',
+      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
       demo: '#',
     },
     {
-      title: 'Landing Page Startup',
+      title: 'Portal SASC',
       description: language === 'pt'
-        ? 'Landing page moderna para startup de tecnologia com animações fluidas, design responsivo e otimização de performance.'
-        : 'Modern landing page for tech startup with fluid animations, responsive design, and performance optimization.',
-      technologies: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
-      github: 'https://github.com/larissadsmachado',
+        ? 'Site institucional da Secretaria de Assistência Social e Cidadania com sistema de gerenciamento de notícias, destaques e conteúdo dinâmico.'
+        : 'Institutional website for the Social Assistance Secretariat with news management system, highlights, and dynamic content.',
+      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
       demo: '#',
     },
     {
-      title: 'Sistema de Gestão',
+      title: 'Jaboatão Prev',
       description: language === 'pt'
-        ? 'Aplicação web para gestão empresarial com autenticação, dashboards customizáveis e integração com APIs externas.'
-        : 'Web application for business management with authentication, customizable dashboards, and external API integration.',
-      technologies: ['React', 'Vite', 'TypeScript', 'Supabase'],
-      github: 'https://github.com/larissadsmachado',
+        ? 'Site institucional do Instituto de Previdência do Município de Jaboatão dos Guararapes, com informações sobre benefícios e serviços.'
+        : 'Institutional website for Jaboatão Municipal Pension Institute, with information about benefits and services.',
+      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
+      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
+      demo: '#',
+    },
+    {
+      title: 'Portal Jaboatão Oficial',
+      description: language === 'pt'
+        ? 'Portal oficial da Prefeitura de Jaboatão dos Guararapes com notícias, serviços ao cidadão e transparência pública.'
+        : 'Official portal of Jaboatão city hall with news, citizen services, and public transparency.',
+      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
+      demo: '#',
+    },
+    {
+      title: 'Amor por Jaboatão',
+      description: language === 'pt'
+        ? 'Plataforma de engajamento cidadão para projetos e iniciativas da comunidade de Jaboatão dos Guararapes.'
+        : 'Citizen engagement platform for community projects and initiatives in Jaboatão dos Guararapes.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
+      demo: '#',
+    },
+    {
+      title: 'Sistema CIPTEA',
+      description: language === 'pt'
+        ? 'Sistema de Cadastro da Pessoa com Transtorno do Espectro Autista, com formulários especializados, gestão de cadastros e painel administrativo.'
+        : 'Registration System for People with Autism Spectrum Disorder, with specialized forms, registration management, and admin panel.',
+      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
       demo: '#',
     },
   ];
