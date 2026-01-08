@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Code2 } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
@@ -14,7 +14,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative py-24 lg:py-32">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative py-24 lg:py-32"
+    >
       <div className="container mx-auto px-6">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-12 lg:gap-20">
           {/* Profile Image */}
@@ -27,12 +30,19 @@ const Hero = () => {
             <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
               {/* Animated gradient border */}
               <div className="absolute inset-0 rounded-full gradient-bg animate-pulse-slow opacity-60 blur-xl" />
+
               <div className="absolute inset-2 rounded-full gradient-border glass">
-                <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-muted">
+                <div className="w-full h-full rounded-full overflow-hidden relative bg-muted">
                   {/* FOTO */}
-                  
+                  <img
+                    src="/images/eu.jpg"
+                    alt="Foto de Larissa Machado"
+                    className="w-full h-full object-cover object-center"
+                  />
+
                 </div>
               </div>
+
               {/* Floating elements */}
               <motion.div
                 className="absolute -top-4 -right-4 w-12 h-12 rounded-xl glass flex items-center justify-center"
@@ -41,17 +51,23 @@ const Hero = () => {
               >
                 <span className="text-xl">⚛️</span>
               </motion.div>
+
               <motion.div
                 className="absolute -bottom-4 -left-4 w-12 h-12 rounded-xl glass flex items-center justify-center"
                 animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                  delay: 1.5,
+                }}
               >
-                <span className="text-xl">✨</span>
+                <span className="text-xl">💻</span>
               </motion.div>
             </div>
           </motion.div>
 
-          {/* Content - Shows first on mobile due to flex-col-reverse on parent */}
+          {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +91,9 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold mb-4"
             >
-              <span className="gradient-text text-glow">Larissa Machado</span>
+              <span className="gradient-text text-glow">
+                Larissa Machado
+              </span>
             </motion.h1>
 
             {/* Tagline */}
@@ -102,6 +120,7 @@ const Hero = () => {
               >
                 {t('hero.cta.projects')}
               </Button>
+
               <Button
                 variant="heroOutline"
                 size="lg"
