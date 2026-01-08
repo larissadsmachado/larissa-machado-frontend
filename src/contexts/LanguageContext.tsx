@@ -25,8 +25,8 @@ const translations = {
     
     // About
     'about.title': 'Sobre Mim',
-    'about.description': 'Sou uma desenvolvedora frontend apaixonada por criar experiências digitais excepcionais. Com sólida experiência em React, Next.js, Vite e TypeScript, desenvolvo interfaces modernas que combinam estética impecável com performance otimizada.',
-    'about.description2': 'Meu foco está em código limpo, acessibilidade e experiência do usuário. Trabalho com sistemas web, sites institucionais e interfaces que fazem a diferença. Estou sempre aberta a novos projetos, especialmente criação de landing pages criativas e funcionais.',
+    'about.description': 'Desenvolvedora Fullstack com experiência sólida em React, Next.js, TypeScript e Tailwind CSS. Atuo no desenvolvimento de sistemas web, portais institucionais e aplicações robustas para órgãos públicos, sempre focando em código limpo, performance e acessibilidade.',
+    'about.description2': 'Trabalho com deploy e gerenciamento de servidores usando PM2, além de integração com APIs e bancos de dados. Tenho paixão por transformar ideias em interfaces funcionais e elegantes. Estou aberta a novos desafios e projetos que exijam qualidade e comprometimento.',
     'about.experience': 'Anos de Experiência',
     'about.projects': 'Projetos Entregues',
     'about.clients': 'Clientes Satisfeitos',
@@ -67,8 +67,8 @@ const translations = {
     
     // About
     'about.title': 'About Me',
-    'about.description': "I'm a frontend developer passionate about creating exceptional digital experiences. With solid experience in React, Next.js, Vite, and TypeScript, I build modern interfaces that combine flawless aesthetics with optimized performance.",
-    'about.description2': 'My focus is on clean code, accessibility, and user experience. I work with web systems, institutional websites, and interfaces that make a difference. I\'m always open to new projects, especially creating creative and functional landing pages.',
+    'about.description': "Fullstack Developer with solid experience in React, Next.js, TypeScript, and Tailwind CSS. I work on developing web systems, institutional portals, and robust applications for public agencies, always focusing on clean code, performance, and accessibility.",
+    'about.description2': "I work with deployment and server management using PM2, as well as API and database integration. I'm passionate about transforming ideas into functional and elegant interfaces. I'm open to new challenges and projects that demand quality and commitment.",
     'about.experience': 'Years of Experience',
     'about.projects': 'Delivered Projects',
     'about.clients': 'Happy Clients',
