@@ -17,9 +17,43 @@ interface ShootingStar {
   duration: number;
 }
 
+interface CodeElement {
+  id: number;
+  x: number;
+  y: number;
+  text: string;
+  duration: number;
+  delay: number;
+  size: number;
+}
+
+const codeSnippets = [
+  '<div>',
+  '</div>',
+  'const',
+  '{ }',
+  '( )',
+  '=>',
+  'return',
+  'export',
+  'import',
+  '</>',
+  '[ ]',
+  'async',
+  'await',
+  'function',
+  'useState',
+  'useEffect',
+  '<Component />',
+  'props',
+  '.map()',
+  '.filter()',
+];
+
 const StarBackground = () => {
   const [stars, setStars] = useState<Star[]>([]);
   const [shootingStars, setShootingStars] = useState<ShootingStar[]>([]);
+  const [codeElements, setCodeElements] = useState<CodeElement[]>([]);
 
   useEffect(() => {
     // Generate static twinkling stars
@@ -32,6 +66,20 @@ const StarBackground = () => {
       delay: Math.random() * 5,
     }));
     setStars(generatedStars);
+  }, []);
+
+  useEffect(() => {
+    // Generate code elements
+    const generatedCodeElements: CodeElement[] = Array.from({ length: 15 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 90 + 5,
+      y: Math.random() * 90 + 5,
+      text: codeSnippets[Math.floor(Math.random() * codeSnippets.length)],
+      duration: Math.random() * 8 + 12,
+      delay: Math.random() * 5,
+      size: Math.random() * 0.3 + 0.7,
+    }));
+    setCodeElements(generatedCodeElements);
   }, []);
 
   useEffect(() => {
@@ -51,7 +99,7 @@ const StarBackground = () => {
     };
 
     const interval = setInterval(createShootingStar, 4000);
-    createShootingStar(); // Create one immediately
+    createShootingStar();
 
     return () => clearInterval(interval);
   }, []);
@@ -65,6 +113,32 @@ const StarBackground = () => {
           background: 'radial-gradient(ellipse at top, hsl(var(--primary) / 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom right, hsl(var(--accent) / 0.1) 0%, transparent 50%)',
         }}
       />
+
+      {/* Floating code elements */}
+      {codeElements.map(element => (
+        <motion.div
+          key={`code-${element.id}`}
+          className="absolute font-mono text-primary/20 select-none"
+          style={{
+            left: `${element.x}%`,
+            top: `${element.y}%`,
+            fontSize: `${element.size}rem`,
+          }}
+          animate={{
+            y: [0, -30, 0],
+            opacity: [0.1, 0.25, 0.1],
+            rotate: [-5, 5, -5],
+          }}
+          transition={{
+            duration: element.duration,
+            delay: element.delay,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        >
+          {element.text}
+        </motion.div>
+      ))}
 
       {/* Twinkling stars */}
       {stars.map(star => (
