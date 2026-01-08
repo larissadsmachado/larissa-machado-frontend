@@ -118,15 +118,17 @@ const StarBackground = () => {
       {codeElements.map(element => (
         <motion.div
           key={`code-${element.id}`}
-          className="absolute font-mono text-primary/20 select-none"
+          className="absolute font-mono select-none"
           style={{
             left: `${element.x}%`,
             top: `${element.y}%`,
             fontSize: `${element.size}rem`,
+            color: 'hsl(var(--primary) / 0.4)',
+            textShadow: '0 0 10px hsl(var(--primary) / 0.3)',
           }}
           animate={{
             y: [0, -30, 0],
-            opacity: [0.1, 0.25, 0.1],
+            opacity: [0.3, 0.6, 0.3],
             rotate: [-5, 5, -5],
           }}
           transition={{
