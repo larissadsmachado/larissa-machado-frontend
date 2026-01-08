@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Atom, Code2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
@@ -45,15 +45,15 @@ const Hero = () => {
 
               {/* Floating elements */}
               <motion.div
-                className="absolute -top-4 -right-4 w-12 h-12 rounded-xl glass flex items-center justify-center"
+                className="absolute -top-4 -right-4 w-12 h-12 rounded-xl glass flex items-center justify-center text-primary"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <span className="text-xl">⚛️</span>
+                <Atom size={24} />
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-4 -left-4 w-12 h-12 rounded-xl glass flex items-center justify-center"
+                className="absolute -bottom-4 -left-4 w-12 h-12 rounded-xl glass flex items-center justify-center text-primary"
                 animate={{ y: [0, 10, 0] }}
                 transition={{
                   duration: 3,
@@ -62,7 +62,7 @@ const Hero = () => {
                   delay: 1.5,
                 }}
               >
-                <span className="text-xl">💻</span>
+                <Code2 size={24} />
               </motion.div>
             </div>
           </motion.div>
