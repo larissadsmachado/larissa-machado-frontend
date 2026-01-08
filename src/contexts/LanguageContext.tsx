@@ -19,7 +19,9 @@ const translations = {
     
     // Hero
     'hero.greeting': 'Olá, eu sou',
-    'hero.tagline': 'Desenvolvedora Frontend criando interfaces modernas e acessíveis',
+'hero.tagline':
+  'Desenvolvedora Full Stack com foco em Frontend, criando interfaces modernas, acessíveis e soluções digitais robustas para sistemas e portais web',
+
     'hero.cta.projects': 'Ver Projetos',
     'hero.cta.contact': 'Entrar em Contato',
     

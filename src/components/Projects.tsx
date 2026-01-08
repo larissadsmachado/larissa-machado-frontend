@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink} from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Projects = () => {
@@ -12,8 +12,7 @@ const Projects = () => {
         ? 'Sistema completo do programa Minha Casa Minha Vida para a prefeitura de Jaboatão dos Guararapes, com formulários de inscrição, validação de dados e painel administrativo.'
         : 'Complete Minha Casa Minha Vida program system for Jaboatão city hall, with registration forms, data validation, and admin panel.',
       technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
-      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
-      demo: '#',
+      demo: 'https://mcmvteste.jaboatao.pe.gov.br/',
     },
     {
       title: 'Portal SASC',
@@ -21,8 +20,7 @@ const Projects = () => {
         ? 'Site institucional da Secretaria de Assistência Social e Cidadania com sistema de gerenciamento de notícias, destaques e conteúdo dinâmico.'
         : 'Institutional website for the Social Assistance Secretariat with news management system, highlights, and dynamic content.',
       technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
-      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
-      demo: '#',
+      demo: 'https://testesasc.jaboatao.pe.gov.br/',
     },
     {
       title: 'Jaboatão Prev',
@@ -30,8 +28,7 @@ const Projects = () => {
         ? 'Site institucional do Instituto de Previdência do Município de Jaboatão dos Guararapes, com informações sobre benefícios e serviços.'
         : 'Institutional website for Jaboatão Municipal Pension Institute, with information about benefits and services.',
       technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
-      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
-      demo: '#',
+      demo: 'https://jaboataoprev.jaboatao.pe.gov.br/',
     },
     {
       title: 'Portal Jaboatão Oficial',
@@ -39,8 +36,7 @@ const Projects = () => {
         ? 'Portal oficial da Prefeitura de Jaboatão dos Guararapes com notícias, serviços ao cidadão e transparência pública.'
         : 'Official portal of Jaboatão city hall with news, citizen services, and public transparency.',
       technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
-      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
-      demo: '#',
+      demo: 'https://jaboatao.pe.gov.br/',
     },
     {
       title: 'Amor por Jaboatão',
@@ -48,8 +44,7 @@ const Projects = () => {
         ? 'Plataforma de engajamento cidadão para projetos e iniciativas da comunidade de Jaboatão dos Guararapes.'
         : 'Citizen engagement platform for community projects and initiatives in Jaboatão dos Guararapes.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
-      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
-      demo: '#',
+      demo: 'https://amorpor.jaboatao.pe.gov.br/',
     },
     {
       title: 'Sistema CIPTEA',
@@ -57,8 +52,15 @@ const Projects = () => {
         ? 'Sistema de Cadastro da Pessoa com Transtorno do Espectro Autista, com formulários especializados, gestão de cadastros e painel administrativo.'
         : 'Registration System for People with Autism Spectrum Disorder, with specialized forms, registration management, and admin panel.',
       technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
-      github: 'https://github.com/stars/larissadsmachado/lists/jaboatao',
       demo: '#',
+    },
+    {
+      title: 'Sistema PCD Jaboatão',
+      description: language === 'pt'
+        ? 'Sistema de Cadastro da Pessoa PCD.'
+        : 'pcd em ingles',
+      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+      demo: 'https://carteirapcd.jaboatao.pe.gov.br/',
     },
   ];
 
@@ -136,17 +138,7 @@ const Projects = () => {
                     {project.title}
                   </h3>
                   <div className="flex gap-2">
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all"
-                      aria-label="View GitHub repository"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Github size={18} />
-                    </motion.a>
+                    
                     <motion.a
                       href={project.demo}
                       target="_blank"
