@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink} from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Projects = () => {
@@ -8,10 +8,10 @@ const Projects = () => {
   const projects = [
     {
       title: 'MCMV Jaboatão',
-      description: language === 'pt' 
+      description: language === 'pt'
         ? 'Sistema completo do programa Minha Casa Minha Vida para a prefeitura de Jaboatão dos Guararapes, com formulários de inscrição, validação de dados e painel administrativo.'
         : 'Complete Minha Casa Minha Vida program system for Jaboatão city hall, with registration forms, data validation, and admin panel.',
-      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://mcmvteste.jaboatao.pe.gov.br/',
     },
     {
@@ -19,7 +19,7 @@ const Projects = () => {
       description: language === 'pt'
         ? 'Site institucional da Secretaria de Assistência Social e Cidadania com sistema de gerenciamento de notícias, destaques e conteúdo dinâmico.'
         : 'Institutional website for the Social Assistance Secretariat with news management system, highlights, and dynamic content.',
-      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://testesasc.jaboatao.pe.gov.br/',
     },
     {
@@ -27,7 +27,7 @@ const Projects = () => {
       description: language === 'pt'
         ? 'Site institucional do Instituto de Previdência do Município de Jaboatão dos Guararapes, com informações sobre benefícios e serviços.'
         : 'Institutional website for Jaboatão Municipal Pension Institute, with information about benefits and services.',
-      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://jaboataoprev.jaboatao.pe.gov.br/',
     },
     {
@@ -35,7 +35,7 @@ const Projects = () => {
       description: language === 'pt'
         ? 'Portal oficial da Prefeitura de Jaboatão dos Guararapes com notícias, serviços ao cidadão e transparência pública.'
         : 'Official portal of Jaboatão city hall with news, citizen services, and public transparency.',
-      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://jaboatao.pe.gov.br/',
     },
     {
@@ -51,17 +51,26 @@ const Projects = () => {
       description: language === 'pt'
         ? 'Sistema de Cadastro da Pessoa com Transtorno do Espectro Autista, com formulários especializados, gestão de cadastros e painel administrativo.'
         : 'Registration System for People with Autism Spectrum Disorder, with specialized forms, registration management, and admin panel.',
-      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: '#',
     },
     {
       title: 'Sistema PCD Jaboatão',
       description: language === 'pt'
-        ? 'Sistema de Cadastro da Pessoa PCD.'
-        : 'pcd em ingles',
-      technologies: ['React', 'TypeScript', 'Next.js', 'PM2'],
+        ? 'Portal e sistema de cadastro destinado à solicitação e emissão da Carteira da Pessoa com Deficiência (PCD) no município de Jaboatão dos Guararapes.'
+        : 'Portal and registration system for requesting and issuing the Person with Disabilities (PCD) card in the municipality of Jaboatão dos Guararapes.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://carteirapcd.jaboatao.pe.gov.br/',
     },
+    {
+      title: 'Portal SEI Jaboatão',
+      description: language === 'pt'
+        ? 'Portal do Sistema Eletrônico de Informações (SEI), utilizado para tramitação e gestão de processos administrativos no município de Jaboatão dos Guararapes.'
+        : 'Electronic Information System (SEI) portal used for handling and managing administrative processes in the municipality of Jaboatão dos Guararapes.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://sei.jaboatao.pe.gov.br/',
+    },
+
   ];
 
   const sectionVariants = {
@@ -104,7 +113,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="gradient-text">{t('projects.title')}</span>
           </h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -125,7 +134,7 @@ const Projects = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-50px' }}
-              whileHover={{ 
+              whileHover={{
                 y: -10,
                 transition: { duration: 0.3 }
               }}
@@ -138,7 +147,7 @@ const Projects = () => {
                     {project.title}
                   </h3>
                   <div className="flex gap-2">
-                    
+
                     <motion.a
                       href={project.demo}
                       target="_blank"
