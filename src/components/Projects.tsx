@@ -50,6 +50,17 @@ const Projects = () => {
       image: '/images/projects/pcd.png',
       category: 'sistema',
     },
+    
+    {
+      title: 'Sistema SASC',
+      description: language === 'pt'
+        ? 'Sistema da Secretaria de Assistência Social e Cidadania com gerenciamento de notícias, destaques e conteúdo dinâmico.'
+        : 'System for the Social Assistance Secretariat with news management, highlights, and dynamic content.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://assistenciasocial.jaboatao.pe.gov.br/',
+      image: '/images/projects/sasc.png',
+      category: 'sistema',
+    },
     // === SITES ===
     {
       title: 'Site Jaboatão Oficial',
@@ -60,16 +71,6 @@ const Projects = () => {
       demo: 'https://jaboatao.pe.gov.br/',
       image: '/images/projects/oficial.png',
       category: 'outro',
-    },
-    {
-      title: 'Sistema SASC',
-      description: language === 'pt'
-        ? 'Sistema da Secretaria de Assistência Social e Cidadania com gerenciamento de notícias, destaques e conteúdo dinâmico.'
-        : 'System for the Social Assistance Secretariat with news management, highlights, and dynamic content.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
-      demo: 'https://assistenciasocial.jaboatao.pe.gov.br/',
-      image: '/images/projects/sasc.png',
-      category: 'sistema',
     },
     {
       title: 'Jaboatão Prev',
@@ -105,11 +106,11 @@ const Projects = () => {
     {
       title: 'PODE',
       description: language === 'pt'
-        ? 'Site focado em conectar pessoas a oportunidades de emprego. Projeto descontinuado.'
-        : 'Website focused on connecting people to job opportunities. Discontinued project.',
+        ? 'Site da Prefeitura de Jaboatão focado em conectar empresas, trabalhadores e consumidores em um só lugar. A plataforma reúne divulgação de serviços, vagas de emprego e apoio à formalização de negócios, fortalecendo a economia local.'
+        : 'Official website of the Jaboatão City Hall focused on connecting businesses, workers, and consumers in one place. The platform brings together service promotion, job listings, and support for business formalization, strengthening the local economy.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
-      demo: '#',
-      image: '/images/projects/pode.png',
+      demo: 'https://www.linkedin.com/posts/kaueksilva_hoje-venho-publicar-para-agradecer-p%C3%B4r-ter-ugcPost-7215757964505194497-2R41?utm_source=share&utm_medium=member_desktop&rcm=ACoAADTBpy4B94fv7-NPvMzJPpCMFboUvn85pbA',
+      image: '/images/projects/pode.jfif',
       category: 'outro',
     },
   ];
