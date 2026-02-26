@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-type ProjectCategory = 'sistema' | 'portal' | 'outro';
+type ProjectCategory = 'sistema' | 'outro';
 
 interface Project {
   title: string;
