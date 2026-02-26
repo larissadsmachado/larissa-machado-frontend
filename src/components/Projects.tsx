@@ -62,14 +62,14 @@ const Projects = () => {
       category: 'portal',
     },
     {
-      title: 'Portal SASC',
+      title: 'Sistema SASC',
       description: language === 'pt'
-        ? 'Site institucional da Secretaria de Assistência Social e Cidadania com sistema de gerenciamento de notícias, destaques e conteúdo dinâmico.'
-        : 'Institutional website for the Social Assistance Secretariat with news management system, highlights, and dynamic content.',
+        ? 'Sistema da Secretaria de Assistência Social e Cidadania com gerenciamento de notícias, destaques e conteúdo dinâmico.'
+        : 'System for the Social Assistance Secretariat with news management, highlights, and dynamic content.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://assistenciasocial.jaboatao.pe.gov.br/',
       image: '/images/projects/sasc.png',
-      category: 'portal',
+      category: 'sistema',
     },
     {
       title: 'Jaboatão Prev',
