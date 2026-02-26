@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-type ProjectCategory = 'sistema' | 'portal' | 'outro';
+type ProjectCategory = 'sistema' | 'outro';
 
 interface Project {
   title: string;
@@ -50,26 +50,26 @@ const Projects = () => {
       image: '/images/projects/pcd.png',
       category: 'sistema',
     },
-    // === PORTAIS ===
+    // === SITES ===
     {
-      title: 'Portal Jaboatão Oficial',
+      title: 'Site Jaboatão Oficial',
       description: language === 'pt'
-        ? 'Portal oficial da Prefeitura de Jaboatão dos Guararapes com notícias, serviços ao cidadão e transparência pública.'
-        : 'Official portal of Jaboatão city hall with news, citizen services, and public transparency.',
+        ? 'Site oficial da Prefeitura de Jaboatão dos Guararapes com notícias, serviços ao cidadão e transparência pública.'
+        : 'Official website of Jaboatão city hall with news, citizen services, and public transparency.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://jaboatao.pe.gov.br/',
       image: '/images/projects/oficial.png',
-      category: 'portal',
+      category: 'outro',
     },
     {
-      title: 'Portal SASC',
+      title: 'Sistema SASC',
       description: language === 'pt'
-        ? 'Site institucional da Secretaria de Assistência Social e Cidadania com sistema de gerenciamento de notícias, destaques e conteúdo dinâmico.'
-        : 'Institutional website for the Social Assistance Secretariat with news management system, highlights, and dynamic content.',
+        ? 'Sistema da Secretaria de Assistência Social e Cidadania com gerenciamento de notícias, destaques e conteúdo dinâmico.'
+        : 'System for the Social Assistance Secretariat with news management, highlights, and dynamic content.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://assistenciasocial.jaboatao.pe.gov.br/',
       image: '/images/projects/sasc.png',
-      category: 'portal',
+      category: 'sistema',
     },
     {
       title: 'Jaboatão Prev',
@@ -79,27 +79,37 @@ const Projects = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://jaboataoprev.jaboatao.pe.gov.br/',
       image: '/images/projects/jaboatao-prev.png',
-      category: 'portal',
+      category: 'outro',
     },
     {
-      title: 'Portal SEI Jaboatão',
+      title: 'Site SEI Jaboatão',
       description: language === 'pt'
-        ? 'Portal do Sistema Eletrônico de Informações (SEI), utilizado para tramitação e gestão de processos administrativos no município de Jaboatão dos Guararapes.'
-        : 'Electronic Information System (SEI) portal used for handling and managing administrative processes in the municipality of Jaboatão dos Guararapes.',
+        ? 'Site do Sistema Eletrônico de Informações (SEI), utilizado para tramitação e gestão de processos administrativos no município de Jaboatão dos Guararapes.'
+        : 'Electronic Information System (SEI) website used for handling and managing administrative processes in the municipality of Jaboatão dos Guararapes.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://portalsei.jaboatao.pe.gov.br/',
       image: '/images/projects/sei.png',
-      category: 'portal',
+      category: 'outro',
     },
-    // === OUTROS ===
+    // === SITES ===
     {
       title: 'Amor por Jaboatão',
       description: language === 'pt'
-        ? 'Plataforma de engajamento cidadão para projetos e iniciativas da comunidade de Jaboatão dos Guararapes.'
-        : 'Citizen engagement platform for community projects and initiatives in Jaboatão dos Guararapes.',
+        ? 'Site de engajamento cidadão para projetos e iniciativas da comunidade de Jaboatão dos Guararapes.'
+        : 'Citizen engagement website for community projects and initiatives in Jaboatão dos Guararapes.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://amorpor.jaboatao.pe.gov.br/',
       image: '/images/projects/amor-jaboatao.png',
+      category: 'outro',
+    },
+    {
+      title: 'PODE',
+      description: language === 'pt'
+        ? 'Site focado em conectar pessoas a oportunidades de emprego. Projeto descontinuado.'
+        : 'Website focused on connecting people to job opportunities. Discontinued project.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: '#',
+      image: '/images/projects/pode.png',
       category: 'outro',
     },
   ];
@@ -185,11 +195,9 @@ const Projects = () => {
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                         project.category === 'sistema'
                           ? 'bg-primary/90 text-primary-foreground'
-                          : project.category === 'portal'
-                          ? 'bg-accent/90 text-accent-foreground'
-                          : 'bg-muted/90 text-muted-foreground'
+                          : 'bg-accent/90 text-accent-foreground'
                       }`}>
-                        {project.category === 'sistema' ? 'Sistema' : project.category === 'portal' ? 'Portal' : 'Plataforma'}
+                        {project.category === 'sistema' ? 'Sistema' : 'Site'}
                       </span>
                     </div>
                   </div>
