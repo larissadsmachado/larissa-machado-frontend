@@ -195,9 +195,7 @@ const Projects = () => {
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                         project.category === 'sistema'
                           ? 'bg-primary/90 text-primary-foreground'
-                          : project.category === 'portal'
-                          ? 'bg-accent/90 text-accent-foreground'
-                          : 'bg-muted/90 text-muted-foreground'
+                          : 'bg-accent/90 text-accent-foreground'
                       }`}>
                         {project.category === 'sistema' ? 'Sistema' : 'Site'}
                       </span>
