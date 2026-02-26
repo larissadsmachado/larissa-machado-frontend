@@ -189,7 +189,7 @@ const Projects = () => {
                           ? 'bg-accent/90 text-accent-foreground'
                           : 'bg-muted/90 text-muted-foreground'
                       }`}>
-                        {project.category === 'sistema' ? 'Sistema' : project.category === 'portal' ? 'Portal' : 'Plataforma'}
+                        {project.category === 'sistema' ? 'Sistema' : 'Site'}
                       </span>
                     </div>
                   </div>
