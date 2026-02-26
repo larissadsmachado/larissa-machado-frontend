@@ -6,7 +6,7 @@ const About = () => {
 
   const stats = [
     { value: '3+', label: t('about.experience') },
-    { value: '20+', label: t('about.projects') },
+    { value: '10+', label: t('about.projects') },
     { value: '15+', label: t('about.clients') },
   ];
 
