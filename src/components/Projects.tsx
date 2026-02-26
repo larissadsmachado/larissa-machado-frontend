@@ -58,7 +58,7 @@ const Projects = () => {
         : 'Official portal of Jaboatão city hall with news, citizen services, and public transparency.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://jaboatao.pe.gov.br/',
-      image: '/images/projects/portal-jaboatao.png',
+      image: '/images/projects/oficial.png',
       category: 'portal',
     },
     {
@@ -88,7 +88,7 @@ const Projects = () => {
         : 'Electronic Information System (SEI) portal used for handling and managing administrative processes in the municipality of Jaboatão dos Guararapes.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://portalsei.jaboatao.pe.gov.br/',
-      image: '/images/projects/portal-sei.png',
+      image: '/images/projects/sei.png',
       category: 'portal',
     },
     // === OUTROS ===
