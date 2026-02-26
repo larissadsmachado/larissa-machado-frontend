@@ -104,7 +104,7 @@ const Projects = () => {
       category: 'outro',
     },
     {
-      title: 'PODE',
+      title: 'PODE (Descontinuado)',
       description: language === 'pt'
         ? 'Site da Prefeitura de Jaboatão focado em conectar empresas, trabalhadores e consumidores em um só lugar. A plataforma reúne divulgação de serviços, vagas de emprego e apoio à formalização de negócios, fortalecendo a economia local.'
         : 'Official website of the Jaboatão City Hall focused on connecting businesses, workers, and consumers in one place. The platform brings together service promotion, job listings, and support for business formalization, strengthening the local economy.',
