@@ -91,15 +91,25 @@ const Projects = () => {
       image: '/images/projects/sei.png',
       category: 'portal',
     },
-    // === OUTROS ===
+    // === SITES ===
     {
       title: 'Amor por Jaboatão',
       description: language === 'pt'
-        ? 'Plataforma de engajamento cidadão para projetos e iniciativas da comunidade de Jaboatão dos Guararapes.'
-        : 'Citizen engagement platform for community projects and initiatives in Jaboatão dos Guararapes.',
+        ? 'Site de engajamento cidadão para projetos e iniciativas da comunidade de Jaboatão dos Guararapes.'
+        : 'Citizen engagement website for community projects and initiatives in Jaboatão dos Guararapes.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://amorpor.jaboatao.pe.gov.br/',
       image: '/images/projects/amor-jaboatao.png',
+      category: 'outro',
+    },
+    {
+      title: 'PODE',
+      description: language === 'pt'
+        ? 'Site focado em conectar pessoas a oportunidades de emprego. Projeto descontinuado.'
+        : 'Website focused on connecting people to job opportunities. Discontinued project.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: '#',
+      image: '/images/projects/pode.png',
       category: 'outro',
     },
   ];
