@@ -50,16 +50,16 @@ const Projects = () => {
       image: '/images/projects/pcd.png',
       category: 'sistema',
     },
-    // === PORTAIS ===
+    // === SITES ===
     {
-      title: 'Portal Jaboatão Oficial',
+      title: 'Site Jaboatão Oficial',
       description: language === 'pt'
-        ? 'Portal oficial da Prefeitura de Jaboatão dos Guararapes com notícias, serviços ao cidadão e transparência pública.'
-        : 'Official portal of Jaboatão city hall with news, citizen services, and public transparency.',
+        ? 'Site oficial da Prefeitura de Jaboatão dos Guararapes com notícias, serviços ao cidadão e transparência pública.'
+        : 'Official website of Jaboatão city hall with news, citizen services, and public transparency.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://jaboatao.pe.gov.br/',
       image: '/images/projects/oficial.png',
-      category: 'portal',
+      category: 'outro',
     },
     {
       title: 'Sistema SASC',
@@ -79,17 +79,17 @@ const Projects = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://jaboataoprev.jaboatao.pe.gov.br/',
       image: '/images/projects/jaboatao-prev.png',
-      category: 'portal',
+      category: 'outro',
     },
     {
-      title: 'Portal SEI Jaboatão',
+      title: 'Site SEI Jaboatão',
       description: language === 'pt'
-        ? 'Portal do Sistema Eletrônico de Informações (SEI), utilizado para tramitação e gestão de processos administrativos no município de Jaboatão dos Guararapes.'
-        : 'Electronic Information System (SEI) portal used for handling and managing administrative processes in the municipality of Jaboatão dos Guararapes.',
+        ? 'Site do Sistema Eletrônico de Informações (SEI), utilizado para tramitação e gestão de processos administrativos no município de Jaboatão dos Guararapes.'
+        : 'Electronic Information System (SEI) website used for handling and managing administrative processes in the municipality of Jaboatão dos Guararapes.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
       demo: 'https://portalsei.jaboatao.pe.gov.br/',
       image: '/images/projects/sei.png',
-      category: 'portal',
+      category: 'outro',
     },
     // === SITES ===
     {
