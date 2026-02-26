@@ -1,109 +1,103 @@
-import { motion, Variants } from 'framer-motion';
-import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useState } from 'react';
 
 const Projects = () => {
-  const { t } = useLanguage();
-  const [showAll, setShowAll] = useState(false);
+  const { t, language } = useLanguage();
 
   const projects = [
     {
       title: 'MCMV Jaboatão',
-      description: 'Sistema de cadastro e gerenciamento do programa Minha Casa Minha Vida para a Prefeitura de Jaboatão dos Guararapes.',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'API REST'],
-      demo: 'https://mcmv.jaboatao.pe.gov.br/',
-      image: '/images/mcmv.png',
+      description: language === 'pt'
+        ? 'Sistema completo do programa Minha Casa Minha Vida para a prefeitura de Jaboatão dos Guararapes, com formulários de inscrição, validação de dados e painel administrativo.'
+        : 'Complete Minha Casa Minha Vida program system for Jaboatão city hall, with registration forms, data validation, and admin panel.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://cadastrohabitacao.jaboatao.pe.gov.br/',
     },
     {
       title: 'Portal SASC',
-      description: 'Portal institucional da Secretaria de Assistência Social e Cidadania com informações e serviços para a população.',
-      technologies: ['React', 'TypeScript', 'Styled Components'],
-      demo: 'https://sasc.jaboatao.pe.gov.br/',
-      image: '/images/sasc.png',
+      description: language === 'pt'
+        ? 'Site institucional da Secretaria de Assistência Social e Cidadania com sistema de gerenciamento de notícias, destaques e conteúdo dinâmico.'
+        : 'Institutional website for the Social Assistance Secretariat with news management system, highlights, and dynamic content.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://assistenciasocial.jaboatao.pe.gov.br/',
     },
     {
-      title: 'Portal Trabalho',
-      description: 'Plataforma de emprego e qualificação profissional conectando cidadãos a oportunidades de trabalho.',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-      demo: 'https://trabalho.jaboatao.pe.gov.br/',
-      image: '/images/trabalho.png',
+      title: 'Jaboatão Prev',
+      description: language === 'pt'
+        ? 'Site institucional do Instituto de Previdência do Município de Jaboatão dos Guararapes, com informações sobre benefícios e serviços.'
+        : 'Institutional website for Jaboatão Municipal Pension Institute, with information about benefits and services.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://jaboataoprev.jaboatao.pe.gov.br/',
     },
     {
-      title: 'Portal SDES',
-      description: 'Site institucional da Secretaria de Desenvolvimento Econômico e Sustentabilidade.',
-      technologies: ['React', 'TypeScript', 'CSS Modules'],
-      demo: 'https://sdes.jaboatao.pe.gov.br/',
-      image: '/images/sdes.png',
+      title: 'Portal Jaboatão Oficial',
+      description: language === 'pt'
+        ? 'Portal oficial da Prefeitura de Jaboatão dos Guararapes com notícias, serviços ao cidadão e transparência pública.'
+        : 'Official portal of Jaboatão city hall with news, citizen services, and public transparency.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://jaboatao.pe.gov.br/',
     },
     {
-      title: 'Portal SEINFRA',
-      description: 'Portal da Secretaria de Infraestrutura com informações sobre obras e projetos municipais.',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-      demo: 'https://seinfra.jaboatao.pe.gov.br/',
-      image: '/images/seinfra.png',
+      title: 'Amor por Jaboatão',
+      description: language === 'pt'
+        ? 'Plataforma de engajamento cidadão para projetos e iniciativas da comunidade de Jaboatão dos Guararapes.'
+        : 'Citizen engagement platform for community projects and initiatives in Jaboatão dos Guararapes.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://amorpor.jaboatao.pe.gov.br/',
     },
     {
-      title: 'Portal SDI',
-      description: 'Site da Secretaria de Desenvolvimento Institucional com serviços e informações ao cidadão.',
-      technologies: ['React', 'TypeScript', 'Styled Components'],
-      demo: 'https://sdi.jaboatao.pe.gov.br/',
-      image: '/images/sdi.png',
+      title: 'Sistema CIPTEA',
+      description: language === 'pt'
+        ? 'Sistema de Cadastro da Pessoa com Transtorno do Espectro Autista, com formulários especializados, gestão de cadastros e painel administrativo.'
+        : 'Registration System for People with Autism Spectrum Disorder, with specialized forms, registration management, and admin panel.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: '#',
     },
     {
-      title: 'SEDUC Jaboatão',
-      description: 'Portal da Secretaria de Educação com recursos para alunos, professores e comunidade escolar.',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-      demo: 'https://seduc.jaboatao.pe.gov.br/',
-      image: '/images/seduc.png',
+      title: 'Sistema PCD Jaboatão',
+      description: language === 'pt'
+        ? 'Portal e sistema de cadastro destinado à solicitação e emissão da Carteira da Pessoa com Deficiência (PCD) no município de Jaboatão dos Guararapes.'
+        : 'Portal and registration system for requesting and issuing the Person with Disabilities (PCD) card in the municipality of Jaboatão dos Guararapes.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://carteirapcd.jaboatao.pe.gov.br/',
     },
     {
-      title: 'PrefConnect',
-      description: 'Sistema interno de comunicação e gestão para servidores da prefeitura.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'TypeScript'],
-      demo: 'https://prefconnect.jaboatao.pe.gov.br/',
-      image: '/images/prefconnect.png',
+      title: 'Portal SEI Jaboatão',
+      description: language === 'pt'
+        ? 'Portal do Sistema Eletrônico de Informações (SEI), utilizado para tramitação e gestão de processos administrativos no município de Jaboatão dos Guararapes.'
+        : 'Electronic Information System (SEI) portal used for handling and managing administrative processes in the municipality of Jaboatão dos Guararapes.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://portalsei.jaboatao.pe.gov.br/',
     },
-    {
-      title: 'Portal Transparência',
-      description: 'Plataforma de transparência pública com dados abertos e prestação de contas.',
-      technologies: ['Next.js', 'TypeScript', 'Charts.js'],
-      demo: 'https://transparencia.jaboatao.pe.gov.br/',
-      image: '/images/transparencia.png',
-    },
-    {
-      title: 'Agenda Cultural',
-      description: 'Calendário de eventos culturais e atividades de lazer do município.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-      demo: 'https://cultura.jaboatao.pe.gov.br/',
-      image: '/images/cultura.png',
-    },
+
   ];
 
-  const sectionVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 80 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
+      },
     },
   };
 
-  const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 50, rotateX: -10 },
+  const cardVariants = {
+    hidden: { opacity: 0, y: 60, rotateX: -10 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       rotateX: 0,
       transition: {
-        duration: 0.6,
-        delay: i * 0.1,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        duration: 0.7,
+        delay: 0.2 + i * 0.15,
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
       },
     }),
   };
-
-  const displayedProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
     <section id="projects" className="py-20 lg:py-32 relative overflow-hidden">
@@ -132,7 +126,7 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" style={{ perspective: '1000px' }}>
-          {displayedProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.article
               key={project.title}
               custom={index}
@@ -146,97 +140,52 @@ const Projects = () => {
               }}
               className="group"
             >
-              <div className="h-full glass rounded-2xl overflow-hidden transition-all duration-300 card-glow gradient-border">
-                {/* Project Image */}
-                <div className="relative h-48 overflow-hidden bg-muted">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="h-full glass rounded-2xl p-6 lg:p-8 transition-all duration-300 card-glow gradient-border">
+                {/* Project Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-xl font-display font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <div className="flex gap-2">
+
+                    <motion.a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all"
+                      aria-label="View live demo"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink size={18} />
+                    </motion.a>
+                  </div>
                 </div>
 
-                <div className="p-6 lg:p-8">
-                  {/* Project Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-xl font-display font-semibold text-foreground group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <div className="flex gap-2">
-                      <motion.a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all"
-                        aria-label="View live demo"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLink size={18} />
-                      </motion.a>
-                    </div>
-                  </div>
+                {/* Description */}
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {project.description}
+                </p>
 
-                  {/* Description */}
-                  <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
-                    {project.description}
-                  </p>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <motion.span
-                        key={tech}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: 0.5 + techIndex * 0.05 }}
-                        className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
-                      >
-                        {tech}
-                      </motion.span>
-                    ))}
-                  </div>
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech, techIndex) => (
+                    <motion.span
+                      key={tech}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: 0.5 + techIndex * 0.05 }}
+                      className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
                 </div>
               </div>
             </motion.article>
           ))}
         </div>
-
-        {/* Show More Button */}
-        {projects.length > 6 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-center mt-12"
-          >
-            <motion.button
-              onClick={() => setShowAll(!showAll)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {showAll ? (
-                <>
-                  {t('projects.showLess')}
-                  <ChevronUp size={20} />
-                </>
-              ) : (
-                <>
-                  {t('projects.showMore')}
-                  <ChevronDown size={20} />
-                </>
-              )}
-            </motion.button>
-          </motion.div>
-        )}
       </div>
     </section>
   );
