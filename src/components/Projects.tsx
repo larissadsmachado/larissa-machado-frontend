@@ -50,7 +50,19 @@ const Projects = () => {
       image: '/images/projects/pcd.png',
       category: 'sistema',
     },
-    
+
+    {
+      title: 'Sistema NadaConsta',
+      description: language === 'pt'
+        ? 'Sistema online destinado à emissão de certidão negativa de débitos municipais (Nada Consta) no município de Jaboatão dos Guararapes, permitindo consulta e geração do documento de forma rápida e segura.'
+        : 'Online system for issuing municipal debt clearance certificates (Nada Consta) in the municipality of Jaboatão dos Guararapes, allowing users to check and generate the document quickly and securely.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://nadaconsta.jaboatao.pe.gov.br/',
+      image: '/images/projects/nadaconsta.png',
+      category: 'sistema',
+    },
+
+
     {
       title: 'Sistema SASC',
       description: language === 'pt'
@@ -92,7 +104,6 @@ const Projects = () => {
       image: '/images/projects/sei.png',
       category: 'outro',
     },
-    // === SITES ===
     {
       title: 'Amor por Jaboatão',
       description: language === 'pt'
@@ -193,11 +204,10 @@ const Projects = () => {
                       loading="lazy"
                     />
                     <div className="absolute top-3 left-3">
-                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                        project.category === 'sistema'
+                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${project.category === 'sistema'
                           ? 'bg-primary/90 text-primary-foreground'
                           : 'bg-accent/90 text-accent-foreground'
-                      }`}>
+                        }`}>
                         {project.category === 'sistema' ? 'Sistema' : 'Site'}
                       </span>
                     </div>
