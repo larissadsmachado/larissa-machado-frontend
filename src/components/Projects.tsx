@@ -31,7 +31,7 @@ const Projects = () => {
       category: 'sistema',
     },
     {
-      title: 'Sistema CIPTEA',
+      title: 'Sistema CIPTEA (Em produção)',
       description: language === 'pt'
         ? 'Sistema de Cadastro da Pessoa com Transtorno do Espectro Autista, com formulários especializados, gestão de cadastros e painel administrativo.'
         : 'Registration System for People with Autism Spectrum Disorder, with specialized forms, registration management, and admin panel.',
@@ -124,6 +124,7 @@ const Projects = () => {
       image: '/images/projects/pode.jfif',
       category: 'outro',
     },
+
   ];
 
   const visibleProjects = showAll ? projects : projects.slice(0, 6);

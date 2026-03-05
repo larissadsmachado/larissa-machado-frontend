@@ -14,7 +14,6 @@ const Services = () => {
         t('services.landing.feature1'),
         t('services.landing.feature2'),
         t('services.landing.feature3'),
-        t('services.landing.feature4'),
       ],
       process: [
         { icon: Clock, text: t('services.landing.process1') },
@@ -30,7 +29,6 @@ const Services = () => {
       features: [
         t('services.portfolio.feature1'),
         t('services.portfolio.feature2'),
-        t('services.portfolio.feature3'),
         t('services.portfolio.feature4'),
       ],
       process: [
