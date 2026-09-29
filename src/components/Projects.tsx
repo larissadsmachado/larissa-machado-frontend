@@ -75,6 +75,16 @@ const Projects = () => {
     },
     // === SITES ===
     {
+      title: 'Portal do Turismo',
+      description: language === 'pt'
+        ? 'Portal oficial de turismo da Prefeitura de Jaboatão dos Guararapes, apresentando atrações locais, praias, patrimônio histórico, gastronomia, turismo rural, hospedagens e calendário de eventos.'
+        : 'Official tourism portal for the Municipality of Jaboatão dos Guararapes, highlighting local attractions, beaches, historical heritage, gastronomy, rural tourism, lodgings, and event calendar.',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      demo: 'https://turismo.jaboatao.pe.gov.br/',
+      image: '/images/projects/turismo.png',
+      category: 'outro',
+    },
+    {
       title: 'Site Jaboatão Oficial',
       description: language === 'pt'
         ? 'Site oficial da Prefeitura de Jaboatão dos Guararapes com notícias, serviços ao cidadão e transparência pública.'
